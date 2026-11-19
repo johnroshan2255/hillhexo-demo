@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>HILLHEXO LTD — Global Trade Enabler</title>
+<title>HILLHEXO LTD — Import & Export | Global Trade Enabler</title>
 <meta name="description" content="HILLHEXO LTD connects high-potential products with high-demand markets. End-to-end logistics, sourcing, supply chains and market expansion across the UK, EU and India.">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="preload" as="image" href="images/container.png" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#000;--b9:#0a1c3f;--b8:#112c62;--b7:#1d438a;--b6:#295bb8;--b4:#4e84ff;
-  --t:#fff;--m:#9aa3b5;--d:#586176;--l:rgba(255,255,255,.09);
+  --bg:#000;--b9:#181c27;--b8:#262d3c;--b7:#2a45a8;--b6:#3a5bd2;--b4:#5d7ff0;
+  --t:#fff;--m:#acafb6;--d:#586176;--l:rgba(255,255,255,.09);
   --e:cubic-bezier(.16,1,.3,1);--pad:clamp(1.1rem,4vw,3rem);
   --serif:'Instrument Serif',Georgia,serif;
 }
@@ -37,7 +37,7 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
 .nav.solid::before{opacity:1}
 .nav.solid{padding-block:.8rem}
 .brand{display:flex;align-items:center;gap:.5rem;font-weight:700;letter-spacing:.08em;font-size:1rem}
-.brand img{width:30px;height:35px;object-fit:contain}
+.brand img{height:54px;width:auto;object-fit:contain}
 .brand .o{color:var(--b4)}
 .links{display:flex;gap:2.2rem;font-size:.9rem;color:#c8cfdc}
 .links a{position:relative}
@@ -49,20 +49,20 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
 .burger{display:none;background:none;border:0;cursor:pointer;font-size:.85rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.6rem 0}
 
 /* HERO */
-.hero{position:relative;height:100svh;min-height:600px;overflow:hidden;display:flex;flex-direction:column}
+.hero{position:relative;height:100svh;min-height:600px;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.55) 75%,#000),url(images/waves-wide.jpg) center/cover no-repeat,#000}
 .spot{position:absolute;left:50%;top:0;width:min(1000px,160vw);height:100%;transform:translateX(-50%);pointer-events:none;
-  background:radial-gradient(40% 30% at 50% 0%,rgba(78,132,255,.35),transparent 70%),linear-gradient(180deg,rgba(78,132,255,.16),transparent 75%);clip-path:polygon(44% 0,56% 0,85% 100%,15% 100%);filter:blur(10px)}
+  background:radial-gradient(40% 30% at 50% 0%,rgba(230,234,242,.28),transparent 70%),linear-gradient(180deg,rgba(220,226,238,.12),transparent 75%);clip-path:polygon(44% 0,56% 0,85% 100%,15% 100%);filter:blur(10px)}
 .hero-top{position:relative;z-index:4;display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:end;padding-top:clamp(6rem,15vh,8.5rem)}
 .hero h1{font-size:clamp(2.2rem,4.7vw,4.6rem);font-weight:500;letter-spacing:-.045em;line-height:.98}
-.hero h1 em{color:#a9c0ff;font-size:1.08em}
+.hero h1 em{color:#d3d6dd;font-size:1.08em}
 .hero-side{justify-self:end;max-width:340px}
 .hero-side p{color:var(--m);font-size:1rem}
 .arrow-link{display:inline-flex;align-items:center;gap:.7rem;margin-top:1.2rem;font-weight:600;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:.3rem;transition:gap .35s var(--e),border-color .3s}
 .arrow-link:hover{gap:1.1rem;border-color:#fff}
 
 .stage{position:relative;flex:1;display:flex;align-items:flex-end;justify-content:center}
-.word{position:absolute;left:50%;bottom:-.06em;transform:translateX(-50%);font-size:clamp(4.2rem,21.5vw,26rem);font-weight:800;letter-spacing:-.065em;line-height:.8;white-space:nowrap;user-select:none;
-  background:linear-gradient(180deg,var(--b6) 0%,var(--b8) 45%,#050c1f 95%);-webkit-background-clip:text;background-clip:text;color:transparent;will-change:transform}
+.word{position:absolute;left:50%;bottom:-.06em;transform:translateX(-50%);font-size:clamp(3.2rem,14.5vw,18rem);font-weight:200;letter-spacing:.05em;line-height:.8;white-space:nowrap;user-select:none;
+  background:linear-gradient(180deg,#f4f6f9 0%,#b4bac4 35%,#545a65 65%,#0d0e11 95%);-webkit-background-clip:text;background-clip:text;color:transparent;will-change:transform}
 .crate{position:relative;z-index:3;width:min(600px,78vw,max(280px,calc((100svh - 330px) * 1.25)));margin-bottom:clamp(2.5rem,9vw,8.5rem);will-change:transform}
 .crate .sw{position:relative;transform-origin:50% -80vh;animation:sway 7s ease-in-out infinite}
 .crate .sw::before{content:"";position:absolute;left:50%;bottom:97%;width:1.5px;height:80vh;transform:translateX(-50%);background:linear-gradient(to top,#c2cad8,rgba(194,202,216,.1) 80%)}
@@ -76,7 +76,7 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
 /* Statement */
 .sec{padding-block:clamp(5rem,12vw,10rem)}
 .statement h2{font-size:clamp(2rem,5.4vw,5.2rem);font-weight:500;letter-spacing:-.045em;line-height:1.02;max-width:17ch;margin-top:1.5rem}
-.statement h2 em{color:#a9c0ff}
+.statement h2 em{color:#d3d6dd}
 .statement .cols{display:grid;grid-template-columns:repeat(12,1fr);gap:1.5rem;margin-top:clamp(2.5rem,6vw,5rem)}
 .statement .cols p{grid-column:7/span 5;color:var(--m);font-size:clamp(1rem,1.4vw,1.15rem)}
 
@@ -93,48 +93,48 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
 .hz-sticky{position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
 .hz-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:clamp(1.5rem,4vh,2.8rem)}
 .hz-head h2{font-size:clamp(2.2rem,5vw,4.6rem);font-weight:500;letter-spacing:-.045em;line-height:.98}
-.hz-head h2 em{color:#a9c0ff}
+.hz-head h2 em{color:#d3d6dd}
 .hz-prog{width:180px;height:2px;background:var(--l);position:relative;overflow:hidden}
 .hz-prog i{position:absolute;inset:0;background:var(--b4);transform-origin:left;transform:scaleX(0)}
 .track{display:flex;gap:clamp(1rem,2vw,1.6rem);padding-inline:var(--pad);will-change:transform}
 .adv{flex:none;width:clamp(300px,36vw,520px);height:clamp(380px,58vh,540px);border-radius:28px;padding:clamp(1.6rem,3vw,2.4rem);display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;
-  background:linear-gradient(160deg,var(--b8),var(--b9) 55%,#030817);border:1px solid rgba(143,176,255,.16)}
-.adv:nth-child(even){background:linear-gradient(160deg,#0c1528,#04070f 60%);}
+  background:linear-gradient(160deg,var(--b8),var(--b9) 55%,#030817);border:1px solid rgba(197,200,207,.16)}
+.adv:nth-child(even){background:linear-gradient(160deg,#13151c,#04070f 60%);}
 .adv .top{display:flex;justify-content:space-between;align-items:flex-start}
-.adv .num{font-family:var(--serif);font-style:italic;font-size:3.4rem;line-height:.8;color:rgba(169,192,255,.75)}
-.adv svg.ic{width:56px;height:56px;color:#a9c0ff;opacity:.9}
+.adv .num{font-family:var(--serif);font-style:italic;font-size:3.4rem;line-height:.8;color:rgba(211,214,221,.75)}
+.adv svg.ic{width:56px;height:56px;color:#d3d6dd;opacity:.9}
 .adv h3{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:500;letter-spacing:-.035em;line-height:1}
-.adv p{color:#b3bdd2;margin-top:.9rem;max-width:34ch}
-.adv::after{content:"";position:absolute;right:-30%;bottom:-40%;width:80%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(78,132,255,.25),transparent);pointer-events:none}
-.adv.end{background:transparent;border:1px dashed rgba(143,176,255,.25);align-items:flex-start}
-.adv.end h3 em{color:#a9c0ff}
+.adv p{color:#c7cad1;margin-top:.9rem;max-width:34ch}
+.adv::after{content:"";position:absolute;right:-30%;bottom:-40%;width:80%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(93,127,240,.25),transparent);pointer-events:none}
+.adv.end{background:transparent;border:1px dashed rgba(197,200,207,.25);align-items:flex-start}
+.adv.end h3 em{color:#d3d6dd}
 
 /* Band */
 .band{position:relative;background:linear-gradient(135deg,var(--b8),var(--b9) 50%,#020610);overflow:hidden}
-.band::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 80% at 85% 0%,rgba(78,132,255,.3),transparent 70%)}
+.band::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 80% at 85% 0%,rgba(93,127,240,.3),transparent 70%)}
 .band .band-in{position:relative;display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(2rem,5vw,5rem);align-items:center}
 .band h2{font-size:clamp(2rem,4.4vw,4rem);font-weight:500;letter-spacing:-.045em;line-height:1}
-.band h2 em{color:#c5d5ff}
+.band h2 em{color:#e4e7ee}
 .band img{width:min(380px,80%);margin-top:2rem;transform:rotate(-5deg);filter:drop-shadow(0 30px 30px rgba(0,0,0,.6))}
 .steps{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.14)}
 .steps div{padding:1.6rem 1.2rem 1.6rem 0;border-bottom:1px solid rgba(255,255,255,.14)}
 .steps div:nth-child(odd){border-right:1px solid rgba(255,255,255,.14)}
 .steps div:nth-child(even){padding-left:1.4rem}
-.steps .k{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:#a9c0ff}
+.steps .k{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:#d3d6dd}
 .steps h4{font-size:1.3rem;font-weight:500;letter-spacing:-.02em;margin:.4rem 0 .3rem}
-.steps p{color:#b8c4dd;font-size:.92rem}
+.steps p{color:#ced1d8;font-size:.92rem}
 
 /* Markets */
 .mk-head{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;margin-bottom:clamp(2rem,5vw,3.5rem)}
 .mk-head h2{font-size:clamp(2.2rem,5vw,4.6rem);font-weight:500;letter-spacing:-.045em;line-height:.98}
-.mk-head h2 em{color:#a9c0ff}
+.mk-head h2 em{color:#d3d6dd}
 .mk-head p{color:var(--m);max-width:48ch;justify-self:end}
 .rows{border-top:1px solid var(--l)}
 .mrow{position:relative;display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:1rem;padding:clamp(1.1rem,2.4vw,1.8rem) .4rem;border-bottom:1px solid var(--l);overflow:hidden;isolation:isolate}
 .mrow::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--b8),var(--b9));transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--e)}
 .mrow:hover::before{transform:scaleY(1)}
 .mrow .i{font-family:var(--serif);font-style:italic;color:var(--d);font-size:1.2rem;transition:color .3s}
-.mrow:hover .i{color:#a9c0ff}
+.mrow:hover .i{color:#d3d6dd}
 .mrow h3{font-size:clamp(1.6rem,4.2vw,3.6rem);font-weight:500;letter-spacing:-.04em;line-height:1;transition:transform .5s var(--e)}
 .mrow:hover h3{transform:translateX(.6rem)}
 .mrow .st{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:.5rem;color:#c8cfdc}
@@ -142,18 +142,18 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
 .mrow .st.x::before{background:#fbbf24;box-shadow:0 0 12px #fbbf24}
 .inds{margin-top:clamp(2.5rem,5vw,4rem);font-size:clamp(1.4rem,3.2vw,2.6rem);line-height:1.25;letter-spacing:-.03em;color:#606a80}
 .inds span{color:#fff;transition:color .3s}
-.inds span:hover{color:#a9c0ff}
+.inds span:hover{color:#d3d6dd}
 .inds .sl{color:var(--b7);margin:0 .35em}
 
 /* Contact */
 .contact .top{display:grid;grid-template-columns:1.4fr 1fr;align-items:end;gap:2rem}
 .contact h2{font-size:clamp(4rem,14vw,13rem);font-weight:500;letter-spacing:-.06em;line-height:.85}
-.contact h2 em{color:#a9c0ff}
+.contact h2 em{color:#d3d6dd}
 .contact .crate2{width:min(380px,100%);justify-self:end;transform:rotate(4deg)}
 .contact .crate2 img{animation:bob 6s ease-in-out infinite;filter:drop-shadow(0 30px 30px rgba(0,0,0,.8))}
 @keyframes bob{50%{transform:translateY(-12px) rotate(-1.5deg)}}
 .mail{display:inline-block;margin-top:clamp(1.5rem,3vw,2.5rem);font-size:clamp(1.3rem,4.2vw,3.4rem);font-weight:500;letter-spacing:-.035em;border-bottom:2px solid var(--b7);padding-bottom:.2rem;transition:color .3s,border-color .3s;word-break:break-all}
-.mail:hover{color:#a9c0ff;border-color:#a9c0ff}
+.mail:hover{color:#d3d6dd;border-color:#d3d6dd}
 .phone{display:block;margin-top:1rem;color:var(--m);font-size:1.1rem}
 .phone:hover{color:#fff}
 .cform{margin-top:clamp(3rem,6vw,5rem);display:grid;grid-template-columns:repeat(4,1fr);gap:2.2rem 2rem;border-top:1px solid var(--l);padding-top:clamp(2rem,4vw,3rem)}
@@ -161,8 +161,8 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
 .f{position:relative}
 .f.w2{grid-column:span 2}.f.w4{grid-column:1/-1}
 .f input,.f select,.f textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.2);padding:.9rem 0 .7rem;font-size:1.1rem;border-radius:0;transition:border-color .3s;appearance:none;-webkit-appearance:none}
-.f select{color:#c8cfdc;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239aa3b5' stroke-width='3'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .2rem center}
-.f select option{background:#0a1c3f;color:#fff}
+.f select{color:#c8cfdc;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23acafb6' stroke-width='3'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .2rem center}
+.f select option{background:#181c27;color:#fff}
 .f textarea{resize:vertical;min-height:110px}
 .f ::placeholder{color:#4c5568}
 .f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--b4)}
@@ -218,12 +218,16 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
 }
 @media (max-width:420px){.mrow .st span{display:none}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}.split .ln-w>span{transform:none}}
+.word .o{background:linear-gradient(180deg,#9fb2f8 0%,#3a5bd2 45%,#0d1330 95%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero h1{background:linear-gradient(180deg,#ffffff 0%,#eef0f4 40%,#a2a9b4 65%,#f2f4f7 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 em{-webkit-text-fill-color:transparent}
+@media (max-width:760px){.brand img{height:44px}}
 </style>
 </head>
 <body>
 
 <header class="nav" id="nav">
-  <a href="#top" class="brand" aria-label="HILLHEXO home"><img src="images/logo.png" alt="" width="30" height="35"><span>HILLHEX<span class="o">O</span></span></a>
+  <a href="#top" class="brand" aria-label="HILLHEXO Ltd — Import & Export, home"><img src="images/logo-nav.png" alt="HILLHEXO Ltd" width="162" height="54"></a>
   <nav class="links" id="menu" aria-label="Main"><a href="#about">About</a><a href="#advantage">Advantage</a><a href="#markets">Markets</a><a href="#contact">Contact</a></nav>
   <a href="#contact" class="talk">Let's talk <i><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></i></a>
   <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
@@ -236,13 +240,13 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
     <div class="hero-top px">
       <h1 class="split" id="h1">Connecting the <em>world</em>, delivering <em>excellence.</em></h1>
       <div class="hero-side rv">
-        <p class="lab" style="margin-bottom:.9rem"><b>●</b>Hillhexo Logistics</p>
+        <p class="lab" style="margin-bottom:.9rem"><b>●</b>Hillhexo Ltd · Import &amp; Export</p>
         <p>End-to-end logistics solutions tailored to your business. Fast, reliable and secure — across the globe.</p>
         <a href="#contact" class="arrow-link">Get started <span>→</span></a>
       </div>
     </div>
     <div class="stage">
-      <div class="word" id="word" aria-hidden="true">HILLHEXO</div>
+      <div class="word" id="word" aria-hidden="true">HILLHEX<span class="o">O</span></div>
       <div class="crate" id="crate"><div class="sw"><img src="images/container.png" alt="Hillhexo shipping container lifted by a crane" width="643" height="388" fetchpriority="high"></div></div>
       <span class="corner l"><span class="ln"></span>Scroll</span>
       <span class="corner r">UK — EU — India</span>
@@ -288,7 +292,7 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
   <section class="band sec">
     <div class="band-in px">
       <div class="rv">
-        <p class="lab" style="color:#b8c4dd;margin-bottom:1.2rem"><b style="color:#c5d5ff">(04)</b>How we work</p>
+        <p class="lab" style="color:#ced1d8;margin-bottom:1.2rem"><b style="color:#e4e7ee">(04)</b>How we work</p>
         <h2>From origin <em>to</em> market — one partner, <em>end to end.</em></h2>
         <img src="images/container.png" alt="" width="643" height="388" loading="lazy">
       </div>
@@ -341,7 +345,7 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
   </section>
 
   <footer class="footer px">
-    <span>© <span id="yr">2026</span> HILLHEXO LTD — Global Trade Enabler</span>
+    <span style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap"><img src="images/logo-nav.png" alt="HILLHEXO Ltd" width="120" height="40" loading="lazy" style="height:40px;width:auto"><span>© <span id="yr">2026</span> HILLHEXO LTD — Import &amp; Export</span></span>
     <nav><a href="#about">About</a><a href="#markets">Markets</a><a href="#contact">Contact</a><a href="#top">Top ↑</a></nav>
   </footer>
 </main>
