@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HILLHEXO — Website Design Demos</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="design-1/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter Tight',system-ui,sans-serif;background:radial-gradient(60% 50% at 50% 0%,rgba(29,67,138,.45),transparent 70%),#000;color:#fff;min-height:100vh;padding:clamp(2rem,6vw,5rem) clamp(1rem,4vw,2rem);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1100px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:700;letter-spacing:.08em}
+.brand img{width:34px;height:40px;object-fit:contain}
+.brand span span{color:#4e84ff}
+h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:600;letter-spacing:-.045em;line-height:1;margin-top:2.5rem}
+p.sub{color:#98a2b6;margin-top:1rem;max-width:520px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:3rem}
+a.card{display:flex;flex-direction:column;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,#07101f,#03060d);text-decoration:none;color:inherit;transition:transform .4s cubic-bezier(.16,1,.3,1),border-color .3s}
+a.card:hover{transform:translateY(-6px);border-color:rgba(78,132,255,.5)}
+.thumb{height:190px;display:grid;place-items:center;background:radial-gradient(60% 70% at 50% 40%,rgba(41,91,184,.5),transparent 70%),#020510}
+.thumb img{width:72%;filter:drop-shadow(0 20px 20px rgba(0,0,0,.7))}
+.txt{padding:1.3rem 1.4rem 1.5rem}
+.txt small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#4e84ff;font-weight:600}
+.txt h2{font-size:1.4rem;font-weight:600;letter-spacing:-.03em;margin:.4rem 0 .4rem}
+.txt p{color:#98a2b6;font-size:.92rem}
+.txt .go{display:inline-block;margin-top:1rem;font-weight:600;font-size:.9rem}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><img src="design-1/images/logo.png" alt=""><span>HILLHEX<span>O</span></span></div>
+  <h1>Website design demos</h1>
+  <p class="sub">Three directions for the new HILLHEXO website — black &amp; dark blue theme, built around the cargo container. Fully responsive.</p>
+  <div class="grid">
+    <a class="card" href="design-1/"><div class="thumb"><img src="design-1/images/container.png" alt=""></div><div class="txt"><small>Design 01</small><h2>Harbor</h2><p>Framed hero with crane spotlight, glowing pedestal and floating glass cards.</p><span class="go">View demo →</span></div></a>
+    <a class="card" href="design-2/"><div class="thumb"><img src="design-2/images/container.png" alt=""></div><div class="txt"><small>Design 02</small><h2>Editorial</h2><p>Giant wordmark behind the container, serif accents, horizontal-scroll highlights.</p><span class="go">View demo →</span></div></a>
+    <a class="card" href="design-3/"><div class="thumb"><img src="design-3/images/container.png" alt=""></div><div class="txt"><small>Design 03</small><h2>Control Center</h2><p>Product-style layout with a live dashboard frame, globe and feature bento.</p><span class="go">View demo →</span></div></a>
+  </div>
+</div>
+</body>
+</html>

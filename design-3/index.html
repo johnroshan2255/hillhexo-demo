@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HILLHEXO LTD — Global Trade Enabler</title>
+<meta name="description" content="HILLHEXO LTD connects high-potential products with high-demand markets. End-to-end logistics, sourcing, supply chains and market expansion across the UK, EU and India.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preload" as="image" href="images/container.png" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;--b9:#0a1c3f;--b8:#112c62;--b7:#1d438a;--b6:#295bb8;--b4:#4e84ff;
+  --t:#fff;--m:#8b95a8;--d:#535d70;--l:rgba(255,255,255,.08);--l2:rgba(255,255,255,.13);
+  --mono:'Geist Mono',ui-monospace,Consolas,monospace;--e:cubic-bezier(.16,1,.3,1);--pad:clamp(1rem,3.5vw,2rem)
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+body{font-family:'Geist',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--t);line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--b4);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:var(--pad)}
+.mono{font-family:var(--mono);font-size:.74rem;letter-spacing:.02em}
+.gb{position:relative;isolation:isolate}
+.gb::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.03) 40%,rgba(78,132,255,.22));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:2}
+
+/* Header */
+.header{position:fixed;inset:0 0 auto;z-index:60;border-bottom:1px solid transparent;transition:border-color .3s}
+.header::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(0,0,0,.7);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);opacity:0;transition:opacity .3s}
+.header.s{border-color:var(--l)}.header.s::before{opacity:1}
+.nav{height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:flex;align-items:center;gap:.5rem;font-weight:600;letter-spacing:.06em;font-size:.98rem}
+.brand img{width:28px;height:33px;object-fit:contain}
+.brand .o{color:var(--b4)}
+.links{display:flex;gap:1.8rem;font-size:.88rem;color:var(--m)}
+.links a{transition:color .2s}.links a:hover{color:#fff}
+.nr{display:flex;gap:.6rem;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;height:40px;padding:0 1rem;border-radius:10px;font-size:.88rem;font-weight:500;border:1px solid transparent;cursor:pointer;transition:background .2s,border-color .2s,transform .2s,box-shadow .25s;white-space:nowrap}
+.btn-p{background:linear-gradient(180deg,var(--b6),var(--b7));border-color:rgba(255,255,255,.14);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 6px 20px -6px rgba(41,91,184,.8)}
+.btn-p:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 10px 30px -6px rgba(78,132,255,.9);transform:translateY(-1px)}
+.btn-s{background:rgba(255,255,255,.04);border-color:var(--l2)}
+.btn-s:hover{background:rgba(255,255,255,.08)}
+.btn-lg{height:46px;padding:0 1.3rem;font-size:.95rem;border-radius:12px}
+.kbd{font-family:var(--mono);font-size:.7rem;padding:.1rem .35rem;border-radius:5px;background:rgba(255,255,255,.12);margin-left:.2rem}
+.burger{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--l2);background:rgba(255,255,255,.03);cursor:pointer;place-items:center}
+
+/* Hero */
+.hero{position:relative;padding:calc(64px + clamp(3rem,8vh,5rem)) 0 0;text-align:center;overflow:hidden}
+.hero::before{content:"";position:absolute;left:50%;top:-20%;width:min(1100px,150vw);height:900px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(29,67,138,.55),transparent 70%);pointer-events:none;z-index:-1}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(var(--l) 1px,transparent 1px),linear-gradient(90deg,var(--l) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(60% 50% at 50% 20%,#000,transparent 80%);mask-image:radial-gradient(60% 50% at 50% 20%,#000,transparent 80%);opacity:.6}
+.ann{display:inline-flex;align-items:center;gap:.6rem;padding:.3rem .8rem .3rem .3rem;border-radius:999px;border:1px solid var(--l2);background:rgba(255,255,255,.03);font-size:.82rem;color:#c5cddb;transition:border-color .2s}
+.ann:hover{border-color:rgba(78,132,255,.5)}
+.ann b{font-weight:500;font-size:.72rem;padding:.2rem .55rem;border-radius:999px;background:var(--b7);color:#fff}
+.hero h1{font-size:clamp(2.5rem,6.6vw,5.4rem);font-weight:600;letter-spacing:-.055em;line-height:1;margin:1.4rem auto 0;max-width:15ch;background:linear-gradient(180deg,#fff 40%,rgba(255,255,255,.55));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{color:var(--m);font-size:clamp(1rem,1.6vw,1.15rem);max-width:540px;margin:1.3rem auto 0}
+.hero .acts{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+
+/* Product frame */
+.frame-wrap{position:relative;margin-top:clamp(3rem,7vw,4.5rem);padding-bottom:clamp(3rem,7vw,5rem)}
+.frame-wrap::before{content:"";position:absolute;left:50%;top:10%;width:80%;height:70%;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(78,132,255,.45),transparent);filter:blur(40px);z-index:-1}
+.frame{border-radius:20px;background:linear-gradient(180deg,rgba(17,44,98,.35),rgba(4,8,18,.92) 30%);overflow:hidden;box-shadow:0 40px 120px -40px rgba(41,91,184,.6);text-align:left}
+.bar{display:flex;align-items:center;gap:1rem;height:44px;padding:0 1rem;border-bottom:1px solid var(--l);background:rgba(255,255,255,.02)}
+.dots{display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.14)}
+.bar .title{flex:1;min-width:0;text-align:center;color:var(--m);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .live{display:flex;align-items:center;gap:.4rem;color:#6ee7b7}
+.bar .live::before{content:"";width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 8px #34d399;animation:bl 1.6s infinite}
+@keyframes bl{50%{opacity:.3}}
+.fgrid{display:grid;grid-template-columns:250px 1fr 250px;gap:14px;padding:14px}
+.col{display:flex;flex-direction:column;gap:14px}
+.w{border-radius:14px;background:rgba(255,255,255,.025);padding:1rem}
+.w .wh{display:flex;justify-content:space-between;align-items:center;color:var(--m);margin-bottom:.8rem}
+.w .big{font-size:1.15rem;font-weight:600;letter-spacing:-.01em}
+.tag{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--mono);font-size:.66rem;padding:.2rem .5rem;border-radius:6px}
+.tag.ok{background:rgba(52,211,153,.12);color:#6ee7b7}
+.tag.ex{background:rgba(251,191,36,.1);color:#fcd34d}
+.tag.bl{background:rgba(78,132,255,.14);color:#a9c0ff}
+.prog{height:6px;border-radius:6px;background:rgba(255,255,255,.07);margin:.9rem 0 .5rem;overflow:hidden;position:relative}
+.prog i{position:absolute;inset:0 auto 0 0;border-radius:6px;background:linear-gradient(90deg,var(--b7),var(--b4));animation:pg 5s var(--e) infinite alternate;width:30%}
+@keyframes pg{to{width:82%}}
+.rt{display:flex;justify-content:space-between;font-size:.8rem;color:#c5cddb}
+.list{display:grid;gap:.55rem;font-size:.85rem}
+.list div{display:flex;justify-content:space-between;align-items:center}
+.chk{display:grid;gap:.5rem;font-size:.85rem;color:#d3d9e4}
+.chk span{display:flex;align-items:center;gap:.55rem}
+.chk span::before{content:"";width:16px;height:16px;border-radius:5px;background:var(--b7) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4'%3E%3Cpolyline points='5 12 10 17 19 7'/%3E%3C/svg%3E") center/10px no-repeat}
+.mini{display:flex;align-items:flex-end;gap:5px;height:56px}
+.mini i{flex:1;border-radius:3px 3px 1px 1px;background:rgba(143,176,255,.2)}
+.mini i.h{background:linear-gradient(180deg,var(--b4),var(--b7))}
+
+/* Dock (center) */
+.dock{position:relative;border-radius:14px;overflow:hidden;min-height:400px;display:grid;place-items:center;background:radial-gradient(60% 55% at 50% 45%,rgba(41,91,184,.4),transparent 70%),#02050c}
+.floor{position:absolute;left:-50%;right:-50%;bottom:-10%;height:70%;transform:perspective(500px) rotateX(62deg);transform-origin:bottom;background-image:linear-gradient(rgba(78,132,255,.28) 1px,transparent 1px),linear-gradient(90deg,rgba(78,132,255,.28) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:linear-gradient(transparent,#000 40%,#000 70%,transparent);mask-image:linear-gradient(transparent,#000 40%,#000 70%,transparent);animation:fm 3s linear infinite}
+@keyframes fm{to{background-position:0 44px}}
+.routes{position:absolute;inset:0;width:100%;height:100%}
+.routes path{fill:none;stroke:url(#rg);stroke-width:1.5;stroke-dasharray:4 8;animation:dsh 1.6s linear infinite}
+@keyframes dsh{to{stroke-dashoffset:-24}}
+.hook{position:relative;z-index:2;width:84%;max-width:520px;margin-top:-4%}
+.hook .sw{position:relative;transform-origin:50% -60%;animation:sway 6.5s ease-in-out infinite}
+.hook .sw::before{content:"";position:absolute;left:50%;bottom:97%;width:1.5px;height:300px;transform:translateX(-50%);background:linear-gradient(to top,#b8c2d4,transparent)}
+.hook img{width:100%;aspect-ratio:643/388;filter:drop-shadow(0 30px 25px rgba(0,0,0,.8))}
+@keyframes sway{0%,100%{transform:rotate(1deg)}50%{transform:rotate(-1deg)}}
+.hook .sh{position:absolute;left:15%;right:15%;bottom:-10%;height:24px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.85),transparent)}
+.dock .lbl{position:absolute;z-index:3;font-family:var(--mono);font-size:.68rem;padding:.3rem .55rem;border-radius:7px;background:rgba(0,0,0,.6);border:1px solid var(--l2);color:#c5cddb;display:flex;align-items:center;gap:.4rem;white-space:nowrap}
+.dock .lbl::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--b4);box-shadow:0 0 8px var(--b4)}
+.dock .l1{left:5%;top:8%}.dock .l2{right:5%;top:8%}.dock .l3{left:50%;bottom:6%;transform:translateX(-50%)}
+
+/* Strip */
+.strip{padding:clamp(1rem,3vw,2rem) 0 clamp(3rem,6vw,4rem);text-align:center}
+.strip p{color:var(--d);font-size:.85rem;margin-bottom:1.5rem}
+.inds{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(1.2rem,4vw,3rem)}
+.inds span{display:flex;align-items:center;gap:.55rem;color:#8a93a6;font-weight:500;font-size:1.02rem;transition:color .25s}
+.inds span:hover{color:#fff}
+.inds svg{width:20px;height:20px;color:var(--b6)}
+
+/* Sections */
+.sec{padding:clamp(4.5rem,10vw,7.5rem) 0;position:relative}
+.head{text-align:center;max-width:680px;margin:0 auto clamp(2.5rem,5vw,3.5rem)}
+.eyb{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.74rem;color:#a9c0ff;padding:.3rem .7rem;border-radius:8px;background:rgba(29,67,138,.3);border:1px solid rgba(78,132,255,.25)}
+.head h2{font-size:clamp(2rem,4.4vw,3.3rem);font-weight:600;letter-spacing:-.045em;line-height:1.05;margin-top:1rem;background:linear-gradient(180deg,#fff 50%,rgba(255,255,255,.6));-webkit-background-clip:text;background-clip:text;color:transparent}
+.head p{color:var(--m);margin-top:.9rem;font-size:1.05rem}
+.card{border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));overflow:hidden}
+
+/* Mission */
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mv .card{padding:clamp(1.6rem,3vw,2.2rem);display:flex;gap:1.2rem;align-items:flex-start}
+.mv .ico{flex:none;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(180deg,var(--b6),var(--b8));box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 8px 24px -8px rgba(41,91,184,.8)}
+.mv .ico svg{width:22px;height:22px}
+.mv h3{font-size:1.25rem;font-weight:600;letter-spacing:-.02em}
+.mv p{color:var(--m);margin-top:.4rem}
+.mv .card.wide{grid-column:1/-1;align-items:center;justify-content:space-between;background:radial-gradient(60% 120% at 100% 50%,rgba(41,91,184,.35),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01))}
+.mv .card.wide p.q{font-size:clamp(1.2rem,2.2vw,1.6rem);color:#e6ebf4;letter-spacing:-.02em;font-weight:500;max-width:36ch;line-height:1.3}
+.mv .card.wide img{width:140px;height:140px;flex:none;animation:flt 7s ease-in-out infinite}
+@keyframes flt{50%{transform:translateY(-8px) rotate(4deg)}}
+
+/* Bento features */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.fc{display:flex;flex-direction:column}
+.fc.a{grid-column:span 4}.fc.b{grid-column:span 2}.fc.c{grid-column:span 2}.fc.d{grid-column:span 4}
+.fc .vz{position:relative;height:210px;border-bottom:1px solid var(--l);display:grid;place-items:center;overflow:hidden;background:radial-gradient(60% 80% at 50% 100%,rgba(29,67,138,.35),transparent 70%)}
+.fc .tx{padding:1.3rem 1.4rem 1.5rem}
+.fc h3{font-size:1.12rem;font-weight:600;letter-spacing:-.015em}
+.fc p{color:var(--m);font-size:.93rem;margin-top:.35rem;max-width:52ch}
+/* layers */
+.layers{position:relative;width:min(340px,80%);height:150px}
+.layers div{position:absolute;left:0;right:0;height:46px;border-radius:12px;display:flex;align-items:center;gap:.6rem;padding:0 1rem;font-size:.86rem;font-weight:500;border:1px solid rgba(143,176,255,.25);background:rgba(10,28,63,.85);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:transform .5s var(--e)}
+.layers div:nth-child(1){top:0;transform:scale(.88)}.layers div:nth-child(2){top:40px;transform:scale(.94)}.layers div:nth-child(3){top:80px;background:linear-gradient(180deg,var(--b7),var(--b8));border-color:rgba(255,255,255,.2)}
+.fc.a:hover .layers div:nth-child(1){transform:scale(.88) translateY(-10px)}.fc.a:hover .layers div:nth-child(2){transform:scale(.94) translateY(-5px)}
+.layers i{width:8px;height:8px;border-radius:50%;background:var(--b4)}
+.layers small{margin-left:auto;font-family:var(--mono);font-size:.66rem;color:#a9c0ff}
+/* chart */
+.chart{width:86%;height:150px}
+.chart .ln{fill:none;stroke:var(--b4);stroke-width:2;stroke-dasharray:400;stroke-dashoffset:400;transition:stroke-dashoffset 1.8s var(--e)}
+.in .chart .ln,.chart.in .ln{stroke-dashoffset:0}
+.chart .ar{fill:url(#cg)}
+/* slider */
+.sld{width:80%}
+.sld .track{position:relative;height:6px;border-radius:6px;background:rgba(255,255,255,.08)}
+.sld .track i{position:absolute;inset:0 auto 0 0;border-radius:6px;background:linear-gradient(90deg,var(--b7),var(--b4));animation:sl 4s ease-in-out infinite alternate;width:20%}
+.sld .track b{position:absolute;top:50%;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px rgba(78,132,255,.3);animation:sb 4s ease-in-out infinite alternate;left:20%}
+@keyframes sl{to{width:85%}}@keyframes sb{to{left:85%}}
+.sld .ends{display:flex;justify-content:space-between;margin-top:1rem;font-family:var(--mono);font-size:.68rem;color:var(--m)}
+/* timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);width:88%;position:relative}
+.tl::before{content:"";position:absolute;left:12.5%;right:12.5%;top:17px;height:2px;background:linear-gradient(90deg,var(--b7),var(--b4));box-shadow:0 0 12px rgba(78,132,255,.6)}
+.tl div{position:relative;display:flex;flex-direction:column;align-items:center;gap:.6rem;font-size:.8rem;color:#c5cddb;text-align:center}
+.tl span{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#04091a;border:2px solid var(--b4);font-family:var(--mono);font-size:.72rem;box-shadow:0 0 18px rgba(78,132,255,.45)}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative}
+.step{padding:1.5rem}
+.step .n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;font-family:var(--mono);font-size:.8rem;background:rgba(29,67,138,.4);border:1px solid rgba(78,132,255,.35);color:#a9c0ff;margin-bottom:1.2rem}
+.step h3{font-size:1.08rem;font-weight:600;letter-spacing:-.015em}
+.step p{color:var(--m);font-size:.9rem;margin-top:.35rem}
+.step .arr{position:absolute;right:-12px;top:2rem;z-index:3;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#000;border:1px solid var(--l2);color:var(--b4)}
+
+/* Markets */
+.mk{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
+.globe{position:relative;aspect-ratio:1;max-width:480px;width:100%;margin-inline:auto}
+.globe::before{content:"";position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(41,91,184,.55),rgba(10,28,63,.6) 50%,#000 75%);box-shadow:0 0 80px -10px rgba(78,132,255,.5),inset 0 0 40px rgba(78,132,255,.2)}
+.globe svg{position:absolute;inset:0;width:100%;height:100%}
+.globe .grid{fill:none;stroke:rgba(143,176,255,.22);stroke-width:1}
+.globe .spin{transform-origin:240px 240px;animation:rot 30s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+.globe .arc{fill:none;stroke:url(#ag);stroke-width:2;stroke-linecap:round;stroke-dasharray:6 6;animation:dsh 1.4s linear infinite}
+.globe .pt{fill:var(--b4)}
+.globe .pt.ex{fill:#6b7280}
+.globe .pulse{fill:none;stroke:var(--b4);stroke-width:1.5;transform-box:fill-box;transform-origin:center;animation:pu 2.4s ease-out infinite}
+@keyframes pu{from{transform:scale(1);opacity:.9}to{transform:scale(3.2);opacity:0}}
+.globe text{font-family:var(--mono);font-size:12px;fill:#dbe3f2}
+.mk .head{text-align:left;margin:0 0 1.8rem}
+.mtable{border-radius:16px;overflow:hidden}
+.mt-row{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;padding:.85rem 1.1rem;border-bottom:1px solid var(--l);font-size:.95rem;transition:background .2s}
+.mt-row:last-child{border-bottom:0}
+.mt-row:hover{background:rgba(255,255,255,.03)}
+.mt-row.h{font-family:var(--mono);font-size:.7rem;color:var(--d);background:rgba(255,255,255,.02)}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.2rem}
+.chips span{font-family:var(--mono);font-size:.72rem;padding:.35rem .6rem;border-radius:7px;border:1px solid var(--l2);color:#c5cddb}
+
+/* Contact */
+.ct{display:grid;grid-template-columns:.9fr 1.1fr}
+.ct-l{padding:clamp(1.6rem,4vw,3rem);background:radial-gradient(90% 70% at 0% 0%,rgba(41,91,184,.4),transparent 60%);border-right:1px solid var(--l);display:flex;flex-direction:column;justify-content:space-between;gap:2rem}
+.ct-l h2{font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:600;letter-spacing:-.045em;line-height:1.05}
+.ct-l p{color:var(--m);margin-top:.8rem}
+.cl{display:grid;gap:.7rem}
+.cl a{display:flex;align-items:center;gap:.8rem;padding:.8rem;border-radius:12px;border:1px solid var(--l);background:rgba(0,0,0,.35);transition:border-color .2s,background .2s}
+.cl a:hover{border-color:rgba(78,132,255,.45);background:rgba(29,67,138,.2)}
+.cl .i{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(29,67,138,.4);color:#a9c0ff}
+.cl small{display:block;font-family:var(--mono);font-size:.66rem;color:var(--d)}
+.ct-l .boxi{width:min(300px,80%);filter:drop-shadow(0 20px 25px rgba(0,0,0,.7))}
+.form{padding:clamp(1.6rem,4vw,3rem);display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-content:start}
+.form .full{grid-column:1/-1}
+.form label{display:block;font-size:.8rem;font-weight:500;color:#c5cddb;margin-bottom:.4rem}
+.form input,.form select,.form textarea{width:100%;height:44px;padding:0 .9rem;border-radius:10px;border:1px solid var(--l2);background:rgba(0,0,0,.5);font-size:16px;transition:border-color .2s,box-shadow .2s;appearance:none;-webkit-appearance:none}
+.form textarea{height:auto;min-height:130px;padding:.75rem .9rem;resize:vertical}
+.form select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238b95a8' stroke-width='3'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center}
+.form select option{background:#0a1c3f}
+.form ::placeholder{color:#4a5366}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--b4);box-shadow:0 0 0 3px rgba(78,132,255,.2)}
+.fsub{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.msg{font-size:.85rem;color:#6ee7b7;min-height:1.1em}
+
+/* Footer */
+.footer{border-top:1px solid var(--l);padding:3rem 0 2rem}
+.ft{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2rem}
+.ft p,.ft a{color:var(--m);font-size:.9rem}
+.ft a:hover{color:#fff}
+.ft h4{font-family:var(--mono);font-size:.72rem;font-weight:500;color:var(--d);margin-bottom:.9rem}
+.ft ul{list-style:none;display:grid;gap:.5rem}
+.fb{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:2.5rem;padding-top:1.4rem;border-top:1px solid var(--l);color:var(--d);font-size:.82rem}
+.status{display:inline-flex;align-items:center;gap:.45rem}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 8px #34d399}
+
+.rv{opacity:0;transform:translateY(20px);filter:blur(4px);transition:opacity .9s var(--e),transform .9s var(--e),filter .9s var(--e)}
+.rv.in{opacity:1;transform:none;filter:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media (max-width:1060px){
+  .fgrid{grid-template-columns:1fr 1fr}
+  .dock{grid-column:1/-1;order:-1}
+  .col{display:contents}
+  .steps{grid-template-columns:1fr 1fr}.step .arr{display:none}
+}
+@media (max-width:900px){
+  .bento{grid-template-columns:1fr 1fr}
+  .fc.a,.fc.d{grid-column:1/-1}.fc.b,.fc.c{grid-column:span 1}
+  .mk,.ct{grid-template-columns:1fr}
+  .ct-l{border-right:0;border-bottom:1px solid var(--l)}
+  .mk .head{text-align:center}
+  .ft{grid-template-columns:1fr 1fr}.ft>div:first-child{grid-column:1/-1}
+}
+@media (max-width:760px){
+  .links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;padding:.5rem var(--pad) 1rem;background:#000;border-bottom:1px solid var(--l);opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity .25s,transform .25s var(--e)}
+  .links.open{opacity:1;transform:none;pointer-events:auto}
+  .links a{padding:.9rem 0;font-size:1rem;color:#fff;border-bottom:1px solid var(--l)}
+  .burger{display:grid}
+  .nr .btn-s{display:none}
+  .mv{grid-template-columns:1fr}
+  .mv .card.wide img{width:90px;height:90px}
+}
+@media (max-width:600px){
+  .fgrid{grid-template-columns:1fr;padding:10px;gap:10px}
+  .w.hide-sm{display:none}
+  .dock{min-height:250px}
+  .dock .l1,.dock .l2{display:none}
+  .bento{grid-template-columns:1fr}.fc.b,.fc.c{grid-column:1/-1}
+  .steps{grid-template-columns:1fr}
+  .form{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr}
+  .hero .acts .btn{flex:1}
+  .nr .btn-p{display:none}
+  .tl div{font-size:.68rem}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none;filter:none}.chart .ln{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="HILLHEXO home"><img src="images/logo.png" alt="" width="28" height="33"><span>HILLHEX<span class="o">O</span></span></a>
+    <nav class="links" id="menu" aria-label="Main"><a href="#about">About</a><a href="#features">Advantage</a><a href="#process">Process</a><a href="#markets">Markets</a><a href="#contact">Contact</a></nav>
+    <div class="nr">
+      <a href="tel:+447553599805" class="btn btn-s">Call us</a>
+      <a href="#contact" class="btn btn-p">Get a quote</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <a href="#markets" class="ann rv"><b>Global</b>Now focused on UK · EU · India <span aria-hidden="true">→</span></a>
+      <h1 class="rv d1">Connecting the World, Delivering Excellence</h1>
+      <p class="sub rv d2">End-to-end logistics solutions tailored to your business. Fast, reliable and secure — across the globe.</p>
+      <div class="acts rv d3">
+        <a href="#contact" class="btn btn-p btn-lg">Get started <span aria-hidden="true">→</span></a>
+        <a href="#process" class="btn btn-s btn-lg">How it works</a>
+      </div>
+
+      <div class="frame-wrap rv d3">
+        <div class="frame gb">
+          <div class="bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="title mono">Hillhexo — Control Center</span><span class="live mono">Live</span></div>
+          <div class="fgrid">
+            <div class="col">
+              <div class="w gb">
+                <div class="wh mono"><span>Shipment</span><span class="tag ok">In transit</span></div>
+                <div class="big">HX 88-729534</div>
+                <div class="prog"><i></i></div>
+                <div class="rt"><span>Origin</span><span>Market</span></div>
+              </div>
+              <div class="w gb hide-sm">
+                <div class="wh mono"><span>End-to-end</span><span class="tag bl">4/4</span></div>
+                <div class="chk"><span>Sourcing</span><span>Logistics</span><span>Supply chain</span><span>Market launch</span></div>
+              </div>
+            </div>
+
+            <div class="dock gb">
+              <div class="floor" aria-hidden="true"></div>
+              <svg class="routes" viewBox="0 0 600 400" preserveAspectRatio="none" aria-hidden="true">
+                <defs><linearGradient id="rg" x1="0" x2="1"><stop offset="0" stop-color="#4e84ff" stop-opacity="0"/><stop offset=".5" stop-color="#8fb0ff"/><stop offset="1" stop-color="#4e84ff" stop-opacity="0"/></linearGradient></defs>
+                <path d="M0 330 C 150 300, 220 280, 300 290 S 480 320, 600 300"/>
+                <path d="M0 370 C 180 340, 260 330, 300 335 S 470 360, 600 350"/>
+              </svg>
+              <div class="hook"><div class="sw"><img src="images/container.png" alt="Hillhexo shipping container lifted by a crane" width="643" height="388" fetchpriority="high"></div><div class="sh" aria-hidden="true"></div></div>
+              <span class="lbl l1">Unit 88-729534</span>
+              <span class="lbl l2">Lanes UK · EU · IN</span>
+              <span class="lbl l3">Global Trade Enabler</span>
+            </div>
+
+            <div class="col">
+              <div class="w gb">
+                <div class="wh mono"><span>Markets</span><span>Status</span></div>
+                <div class="list">
+                  <div><span>United Kingdom</span><span class="tag ok">Active</span></div>
+                  <div><span>European Union</span><span class="tag ok">Active</span></div>
+                  <div><span>India</span><span class="tag ok">Active</span></div>
+                  <div><span>Asia</span><span class="tag ex">Exploring</span></div>
+                  <div><span>Africa</span><span class="tag ex">Exploring</span></div>
+                  <div><span>South America</span><span class="tag ex">Exploring</span></div>
+                </div>
+              </div>
+              <div class="w gb hide-sm">
+                <div class="wh mono"><span>Demand vs supply</span></div>
+                <div class="mini" aria-hidden="true"><i style="height:35%"></i><i style="height:50%"></i><i style="height:42%"></i><i class="h" style="height:95%"></i><i style="height:60%"></i><i style="height:28%"></i><i style="height:45%"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="strip">
+    <div class="wrap">
+      <p>Industries in focus</p>
+      <div class="inds">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>Consumer goods</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V12"/><path d="M12 12C12 7 8 4 3 4c0 5 4 8 9 8z"/><path d="M12 12c0-5 4-8 9-8 0 5-4 8-9 8z"/></svg>Agriculture</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Industrial materials</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.2-8.6"/><polyline points="21 3 21 9 15 9"/></svg>Sustainable products</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>Tech accessories</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.4 6.6 16 3l-2 2h-4L8 3 3.6 6.6 6 10l2-1v12h8V9l2 1z"/></svg>Fashion</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="sec" id="about" style="padding-top:clamp(2rem,5vw,3.5rem)">
+    <div class="wrap">
+      <div class="head rv"><span class="eyb">// Who we are</span><h2>Mission &amp; Vision</h2><p>Transforming global trade by making high-potential products accessible, scalable, and successful across borders.</p></div>
+      <div class="mv">
+        <article class="card gb rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><div><h3>Our Vision</h3><p>To become a leading global trade enabler and product development powerhouse connecting emerging products with high-demand markets.</p></div></article>
+        <article class="card gb rv d1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><div><h3>Our Mission</h3><p>Making high-potential products accessible, scalable, and successful across borders.</p></div></article>
+        <article class="card gb wide rv d2"><div><span class="eyb" style="margin-bottom:1rem">// The concept</span><p class="q">HILLHEXO LTD acts as a bridge between product origin and market demand.</p><p style="margin-top:.6rem">We identify products with strong potential, facilitate logistics, build supply chains, and create or expand markets.</p></div><img src="images/chrome-blob.png" alt="" width="140" height="140" loading="lazy"></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="sec" id="features" style="padding-top:0">
+    <div class="wrap">
+      <div class="head rv"><span class="eyb">// Why choose us</span><h2>Our Competitive Advantage</h2></div>
+      <div class="bento">
+        <article class="card gb fc a rv">
+          <div class="vz"><div class="layers"><div><i></i>Logistics support<small>01</small></div><div><i></i>Smart trading<small>02</small></div><div><i></i>Direct brand creation<small>03</small></div></div></div>
+          <div class="tx"><h3>Hybrid Model</h3><p>A unique combination of logistics support, smart trading, and direct brand creation under one roof.</p></div>
+        </article>
+        <article class="card gb fc b rv d1">
+          <div class="vz"><svg class="chart" id="chart" viewBox="0 0 300 150" aria-hidden="true"><defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4e84ff" stop-opacity=".45"/><stop offset="1" stop-color="#4e84ff" stop-opacity="0"/></linearGradient></defs><path class="ar" d="M0 120 C 40 115, 60 100, 100 104 S 160 80, 190 60 S 250 30, 300 18 L300 150 L0 150Z"/><path class="ln" d="M0 120 C 40 115, 60 100, 100 104 S 160 80, 190 60 S 250 30, 300 18"/><circle cx="300" cy="18" r="5" fill="#fff"/><circle cx="300" cy="18" r="11" fill="none" stroke="#4e84ff" stroke-opacity=".5"/></svg></div>
+          <div class="tx"><h3>Market Intelligence</h3><p>Data-driven product selection — we only scale products with high demand and low supply gaps.</p></div>
+        </article>
+        <article class="card gb fc c rv">
+          <div class="vz"><div class="sld"><div class="track"><i></i><b></b></div><div class="ends"><span>Small supplier</span><span>Enterprise</span></div></div></div>
+          <div class="tx"><h3>Flexibility</h3><p>We adapt our models to work with both emerging, small suppliers and large-scale enterprises.</p></div>
+        </article>
+        <article class="card gb fc d rv d1">
+          <div class="vz"><div class="tl"><div><span>01</span>Sourcing</div><div><span>02</span>Logistics</div><div><span>03</span>Supply chain</div><div><span>04</span>Market</div></div></div>
+          <div class="tx"><h3>End-to-End Control</h3><p>From initial sourcing to final market delivery, we manage the full supply chain to guarantee success.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="sec" id="process" style="padding-top:0">
+    <div class="wrap">
+      <div class="head rv"><span class="eyb">// How it works</span><h2>From origin to market</h2><p>One partner across the whole journey.</p></div>
+      <div class="steps">
+        <div class="card gb step rv"><span class="n">01</span><h3>Identify</h3><p>Products with strong potential, chosen with market intelligence.</p><span class="arr" aria-hidden="true">→</span></div>
+        <div class="card gb step rv d1"><span class="n">02</span><h3>Facilitate logistics</h3><p>Fast, reliable and secure — tailored to your business.</p><span class="arr" aria-hidden="true">→</span></div>
+        <div class="card gb step rv d2"><span class="n">03</span><h3>Build supply chains</h3><p>With emerging suppliers and large-scale enterprises.</p><span class="arr" aria-hidden="true">→</span></div>
+        <div class="card gb step rv d3"><span class="n">04</span><h3>Create &amp; expand markets</h3><p>Smart trading and direct brand creation across borders.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Markets -->
+  <section class="sec" id="markets" style="padding-top:0">
+    <div class="wrap mk">
+      <div class="globe rv" aria-label="Network globe connecting the UK, EU and India">
+        <svg viewBox="0 0 480 480" aria-hidden="true">
+          <defs><linearGradient id="ag" x1="0" x2="1"><stop offset="0" stop-color="#8fb0ff"/><stop offset="1" stop-color="#4e84ff"/></linearGradient><clipPath id="gc"><circle cx="240" cy="240" r="202"/></clipPath></defs>
+          <g class="grid" clip-path="url(#gc)">
+            <circle cx="240" cy="240" r="201"/>
+            <ellipse cx="240" cy="240" rx="201" ry="60"/><ellipse cx="240" cy="240" rx="201" ry="130"/>
+            <line x1="39" y1="240" x2="441" y2="240"/>
+            <g class="spin"><ellipse cx="240" cy="240" rx="60" ry="201"/><ellipse cx="240" cy="240" rx="130" ry="201"/><ellipse cx="240" cy="240" rx="180" ry="201"/><line x1="240" y1="39" x2="240" y2="441"/></g>
+          </g>
+          <path class="arc" d="M196 150 Q 225 115 250 160"/>
+          <path class="arc" d="M250 160 Q 300 150 330 228"/>
+          <path class="arc" d="M196 150 Q 260 90 330 228" style="opacity:.6"/>
+          <circle class="pt" cx="196" cy="150" r="5"/><circle class="pulse" cx="196" cy="150" r="5"/>
+          <circle class="pt" cx="250" cy="160" r="5"/><circle class="pulse" cx="250" cy="160" r="5" style="animation-delay:.8s"/>
+          <circle class="pt" cx="330" cy="228" r="5"/><circle class="pulse" cx="330" cy="228" r="5" style="animation-delay:1.6s"/>
+          <circle class="pt ex" cx="360" cy="190" r="4"/><circle class="pt ex" cx="250" cy="300" r="4"/><circle class="pt ex" cx="150" cy="320" r="4"/>
+          <text x="160" y="140">UK</text><text x="258" y="152">EU</text><text x="340" y="244">India</text>
+        </svg>
+      </div>
+      <div class="rv d1">
+        <div class="head"><span class="eyb">// Global reach</span><h2>Market Opportunity</h2><p>Global supply is increasing, but market access remains fragmented. We leverage government free-trade deals to solve failures caused by poor logistics, weak branding, or entry strategy.</p></div>
+        <div class="card gb mtable">
+          <div class="mt-row h"><span>MARKET</span><span>STATUS</span></div>
+          <div class="mt-row"><span>United Kingdom</span><span class="tag ok">Active</span></div>
+          <div class="mt-row"><span>European Union</span><span class="tag ok">Active</span></div>
+          <div class="mt-row"><span>India</span><span class="tag ok">Active</span></div>
+          <div class="mt-row"><span>Asia · Africa · South America</span><span class="tag ex">Exploring</span></div>
+        </div>
+        <div class="chips"><span>Consumer goods</span><span>Agriculture</span><span>Industrial materials</span><span>Sustainable products</span><span>Tech accessories</span><span>Fashion</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="sec" id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="card gb ct rv">
+        <div class="ct-l">
+          <div><span class="eyb">// Get in touch</span><h2 style="margin-top:1rem">Ready to move your product to market?</h2><p>Tell us what you want to move and where. We'll get back to you quickly.</p></div>
+          <div class="cl">
+            <a href="tel:+447553599805"><span class="i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span><small>PHONE</small>+44 7553 599805</span></a>
+            <a href="mailto:hillhexo.global@gmail.com"><span class="i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><span><small>EMAIL</small>hillhexo.global@gmail.com</span></a>
+          </div>
+          <img class="boxi" src="images/container.png" alt="" width="643" height="388" loading="lazy">
+        </div>
+        <form class="form" id="enquiry" novalidate>
+          <div><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your full name" required></div>
+          <div><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></div>
+          <div><label for="f-phone">Phone number</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+44 ..."></div>
+          <div><label for="f-pri">Priority</label><select id="f-pri" name="priority"><option value="" selected disabled>Select priority</option><option>Low</option><option>Medium</option><option>Urgent</option></select></div>
+          <div class="full"><label for="f-msg">Enquiry</label><textarea id="f-msg" name="message" placeholder="Product, origin, destination…" required></textarea></div>
+          <div class="full fsub"><span class="msg" id="msg" role="status"></span><button class="btn btn-p btn-lg" type="submit">Send enquiry <span aria-hidden="true">→</span></button></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="ft">
+      <div><a href="#top" class="brand" style="margin-bottom:1rem"><img src="images/logo.png" alt="" width="28" height="33" loading="lazy"><span style="color:#fff">HILLHEX<span class="o">O</span></span></a><p style="max-width:36ch">Global trade enabler connecting high-potential products with high-demand markets.</p></div>
+      <div><h4>COMPANY</h4><ul><li><a href="#about">About</a></li><li><a href="#features">Advantage</a></li><li><a href="#process">Process</a></li><li><a href="#markets">Markets</a></li></ul></div>
+      <div><h4>CONTACT</h4><ul><li><a href="tel:+447553599805">+44 7553 599805</a></li><li><a href="mailto:hillhexo.global@gmail.com">hillhexo.global@gmail.com</a></li></ul></div>
+    </div>
+    <div class="fb"><span>© <span id="yr">2026</span> HILLHEXO LTD. All rights reserved.</span><span class="status">Accepting new enquiries</span></div>
+  </div>
+</footer>
+
+<script>
+(()=>{
+  const $=s=>document.querySelector(s);
+  $('#yr').textContent=new Date().getFullYear();
+  const header=$('#header'),menu=$('#menu'),burger=$('#burger');
+  let t=false;addEventListener('scroll',()=>{if(t)return;t=true;requestAnimationFrame(()=>{header.classList.toggle('s',scrollY>10);t=false})},{passive:true});
+  const setMenu=o=>{menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Close menu':'Open menu')};
+  burger.addEventListener('click',()=>setMenu(!menu.classList.contains('open')));
+  menu.addEventListener('click',e=>{if(e.target.closest('a'))setMenu(false)});
+  addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px',threshold:.06});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  const form=$('#enquiry'),msg=$('#msg');
+  form.addEventListener('submit',e=>{
+    e.preventDefault();const d=Object.fromEntries(new FormData(form));
+    if(!d.name||!d.message||!d.email||!form.email.checkValidity()){msg.style.color='#fca5a5';msg.textContent='Please add your name, a valid email and your enquiry.';return}
+    const body=`Name: ${d.name}\nEmail: ${d.email}\nPhone: ${d.phone||'-'}\nPriority: ${d.priority||'-'}\n\n${d.message}`;
+    location.href=`mailto:hillhexo.global@gmail.com?subject=${encodeURIComponent('Website enquiry — '+d.name+(d.priority?' ['+d.priority+']':''))}&body=${encodeURIComponent(body)}`;
+    msg.style.color='';msg.textContent='Opening your email app…';
+  });
+})();
+</script>
+</body>
+</html>
