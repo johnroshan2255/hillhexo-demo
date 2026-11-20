@@ -135,7 +135,44 @@ button,input,select,textarea{font:inherit;color:inherit}
 .mv p{color:var(--m);margin-top:.4rem}
 .mv .card.wide{grid-column:1/-1;align-items:center;justify-content:space-between;background:radial-gradient(60% 120% at 100% 50%,rgba(58,91,210,.35),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01))}
 .mv .card.wide p.q{font-size:clamp(1.2rem,2.2vw,1.6rem);color:#e6ebf4;letter-spacing:-.02em;font-weight:500;max-width:36ch;line-height:1.3}
-.mv .card.wide img{width:140px;height:140px;flex:none;animation:flt 7s ease-in-out infinite}
+.lqb{position:relative;width:170px;height:170px;flex:none;touch-action:pan-y}
+.lqb img,.lqb canvas{position:absolute;left:-20%;top:-20%;width:140%;height:140%}
+.lqb img{left:0;top:0;width:100%;height:100%;animation:flt 7s ease-in-out infinite}
+.lqb canvas{filter:drop-shadow(0 18px 22px rgba(0,0,0,.65))}
+.lqb.gl img{display:none}
+.mv .card.wide{overflow:visible}
+
+/* Services */
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svc{padding:1.6rem;display:flex;flex-direction:column}
+.svc .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.3rem}
+.svc .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(180deg,var(--b6),var(--b8));box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 8px 24px -8px rgba(58,91,210,.8)}
+.svc .ico svg{width:20px;height:20px}
+.svc h3{font-size:1.25rem;font-weight:600;letter-spacing:-.02em}
+.svc>p{color:var(--m);font-size:.93rem;margin-top:.4rem}
+.svc ul{list-style:none;margin-top:1.3rem;display:grid;gap:.15rem;border-top:1px solid var(--l);padding-top:.9rem}
+.svc li{display:flex;align-items:center;gap:.6rem;font-size:.9rem;color:#d3d9e4;padding:.4rem 0}
+.svc li::before{content:"";flex:none;width:16px;height:16px;border-radius:5px;background:var(--b7) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4'%3E%3Cpolyline points='5 12 10 17 19 7'/%3E%3C/svg%3E") center/10px no-repeat}
+.svc.hl{background:radial-gradient(80% 60% at 50% 0%,rgba(58,91,210,.32),transparent 70%),linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01))}
+/* hero widgets */
+.models div{display:flex;justify-content:space-between;align-items:center}
+.wf{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin:.2rem 0 .7rem}
+.wf i{height:6px;border-radius:3px;background:rgba(255,255,255,.08)}
+.wf i.on{background:linear-gradient(90deg,var(--b7),var(--b4))}
+.wf i.cur{background:var(--b4);box-shadow:0 0 10px var(--b4);animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{50%{opacity:.45}}
+/* globe legend */
+.lgd{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.4rem}
+.lgd span{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--mono);font-size:.72rem;padding:.35rem .65rem;border-radius:8px;border:1px solid var(--l2);color:#c5cddb}
+.lgd i{width:8px;height:8px;border-radius:50%;background:var(--b4);box-shadow:0 0 8px var(--b4)}
+.lgd i.ex{background:#6b7280;box-shadow:none}
+.globe text.ex{fill:#9ca3af}
+/* footer subscribe */
+.sub{display:flex;gap:.4rem;margin-top:.9rem;padding:.3rem;border-radius:12px;border:1px solid var(--l2);background:rgba(0,0,0,.4);transition:border-color .2s,box-shadow .2s}
+.sub:focus-within{border-color:var(--b4);box-shadow:0 0 0 3px rgba(93,127,240,.2)}
+.sub input{flex:1;min-width:0;background:none;border:0;outline:none;padding:0 .7rem;font-size:16px;height:40px}
+.sub input::placeholder{color:#4a5366}
+.sub .btn{height:40px;width:40px;padding:0}
 @keyframes flt{50%{transform:translateY(-8px) rotate(4deg)}}
 
 /* Bento features */
@@ -173,7 +210,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 /* Steps */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative}
-.step{padding:1.5rem}
+.step{padding:1.5rem;position:relative;overflow:visible}
 .step .n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;font-family:var(--mono);font-size:.8rem;background:rgba(42,69,168,.4);border:1px solid rgba(93,127,240,.35);color:#d3d6dd;margin-bottom:1.2rem}
 .step h3{font-size:1.08rem;font-weight:600;letter-spacing:-.015em}
 .step p{color:var(--m);font-size:.9rem;margin-top:.35rem}
@@ -212,7 +249,6 @@ button,input,select,textarea{font:inherit;color:inherit}
 .cl a:hover{border-color:rgba(93,127,240,.45);background:rgba(42,69,168,.2)}
 .cl .i{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(42,69,168,.4);color:#d3d6dd}
 .cl small{display:block;font-family:var(--mono);font-size:.66rem;color:var(--d)}
-.ct-l .boxi{width:min(300px,80%);filter:drop-shadow(0 20px 25px rgba(0,0,0,.7))}
 .form{padding:clamp(1.6rem,4vw,3rem);display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-content:start}
 .form .full{grid-column:1/-1}
 .form label{display:block;font-size:.8rem;font-weight:500;color:#c5cddb;margin-bottom:.4rem}
@@ -227,7 +263,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 /* Footer */
 .footer{border-top:1px solid var(--l);padding:3rem 0 2rem}
-.ft{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2rem}
+.ft{display:grid;grid-template-columns:1.3fr 1fr 1.3fr;gap:2.5rem}
 .ft p,.ft a{color:var(--m);font-size:.9rem}
 .ft a:hover{color:#fff}
 .ft h4{font-family:var(--mono);font-size:.72rem;font-weight:500;color:var(--d);margin-bottom:.9rem}
@@ -245,7 +281,9 @@ button,input,select,textarea{font:inherit;color:inherit}
   .dock{grid-column:1/-1;order:-1}
   .col{display:contents}
   .steps{grid-template-columns:1fr 1fr}.step .arr{display:none}
+  .svcs{grid-template-columns:1fr 1fr}.svc.hl{grid-column:1/-1}
 }
+@media (max-width:700px){.svcs{grid-template-columns:1fr}.svc.hl{grid-column:auto}}
 @media (max-width:900px){
   .bento{grid-template-columns:1fr 1fr}
   .fc.a,.fc.d{grid-column:1/-1}.fc.b,.fc.c{grid-column:span 1}
@@ -261,7 +299,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   .burger{display:grid}
   .nr .btn-s{display:none}
   .mv{grid-template-columns:1fr}
-  .mv .card.wide img{width:90px;height:90px}
+  .lqb{width:100px;height:100px}
 }
 @media (max-width:600px){
   .fgrid{grid-template-columns:1fr;padding:10px;gap:10px}
@@ -288,7 +326,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 <header class="header" id="header">
   <div class="wrap nav">
     <a href="#top" class="brand" aria-label="HILLHEXO Ltd — Import & Export, home"><img src="images/logo-nav.png" alt="HILLHEXO Ltd" width="144" height="48"></a>
-    <nav class="links" id="menu" aria-label="Main"><a href="#about">About</a><a href="#features">Advantage</a><a href="#process">Process</a><a href="#markets">Markets</a><a href="#contact">Contact</a></nav>
+    <nav class="links" id="menu" aria-label="Main"><a href="#about">About</a><a href="#services">Services</a><a href="#features">Advantage</a><a href="#process">Process</a><a href="#markets">Markets</a><a href="#contact">Contact</a></nav>
     <div class="nr">
       <a href="tel:+447553599805" class="btn btn-s">Call us</a>
       <a href="#contact" class="btn btn-p">Get a quote</a>
@@ -321,8 +359,10 @@ button,input,select,textarea{font:inherit;color:inherit}
                 <div class="rt"><span>Origin</span><span>Market</span></div>
               </div>
               <div class="w gb hide-sm">
-                <div class="wh mono"><span>End-to-end</span><span class="tag bl">4/4</span></div>
-                <div class="chk"><span>Sourcing</span><span>Logistics</span><span>Supply chain</span><span>Market launch</span></div>
+                <div class="wh mono"><span>Workflow</span><span class="tag bl">06/08</span></div>
+                <div class="wf" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="cur"></i><i></i><i></i></div>
+                <div class="big" style="font-size:1rem">Logistics execution</div>
+                <div class="rt" style="margin-top:.3rem"><span>Shipping · customs · warehouse</span></div>
               </div>
             </div>
 
@@ -341,14 +381,11 @@ button,input,select,textarea{font:inherit;color:inherit}
 
             <div class="col">
               <div class="w gb">
-                <div class="wh mono"><span>Markets</span><span>Status</span></div>
+                <div class="wh mono"><span>Business models</span><span>3</span></div>
                 <div class="list">
-                  <div><span>United Kingdom</span><span class="tag ok">Active</span></div>
-                  <div><span>European Union</span><span class="tag ok">Active</span></div>
-                  <div><span>India</span><span class="tag ok">Active</span></div>
-                  <div><span>Asia</span><span class="tag ex">Exploring</span></div>
-                  <div><span>Africa</span><span class="tag ex">Exploring</span></div>
-                  <div><span>South America</span><span class="tag ex">Exploring</span></div>
+                  <div><span>Support Services</span><span class="tag bl">Logistics</span></div>
+                  <div><span>Inside Dealer</span><span class="tag bl">Trading</span></div>
+                  <div><span>Direct Dealer</span><span class="tag bl">Brand</span></div>
                 </div>
               </div>
               <div class="w gb hide-sm">
@@ -380,11 +417,35 @@ button,input,select,textarea{font:inherit;color:inherit}
   <!-- Mission & Vision -->
   <section class="sec" id="about" style="padding-top:clamp(2rem,5vw,3.5rem)">
     <div class="wrap">
-      <div class="head rv"><span class="eyb">// Who we are</span><h2>Mission &amp; Vision</h2><p>Transforming global trade by making high-potential products accessible, scalable, and successful across borders.</p></div>
+      <div class="head rv"><span class="eyb">// Who we are</span><h2>Mission &amp; Vision</h2></div>
       <div class="mv">
         <article class="card gb rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><div><h3>Our Vision</h3><p>To become a leading global trade enabler and product development powerhouse connecting emerging products with high-demand markets.</p></div></article>
-        <article class="card gb rv d1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><div><h3>Our Mission</h3><p>Making high-potential products accessible, scalable, and successful across borders.</p></div></article>
-        <article class="card gb wide rv d2"><div><span class="eyb" style="margin-bottom:1rem">// The concept</span><p class="q">HILLHEXO LTD acts as a bridge between product origin and market demand.</p><p style="margin-top:.6rem">We identify products with strong potential, facilitate logistics, build supply chains, and create or expand markets.</p></div><img src="images/chrome-blob.png" alt="" width="140" height="140" loading="lazy"></article>
+        <article class="card gb rv d1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><div><h3>Our Mission</h3><p>Transforming global trade by making high-potential products accessible, scalable, and successful across borders.</p></div></article>
+        <article class="card gb wide rv d2"><div><span class="eyb" style="margin-bottom:1rem">// The concept</span><p class="q">HILLHEXO LTD acts as a bridge between product origin and market demand.</p><p style="margin-top:.6rem">We identify products with strong potential, facilitate logistics, build supply chains, and create or expand markets.</p></div><div class="lqb" aria-hidden="true"><img src="images/chrome-blob.png" alt="" width="170" height="170" loading="lazy"><canvas></canvas></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="sec" id="services" style="padding-top:0">
+    <div class="wrap">
+      <div class="head rv"><span class="eyb">// What we do</span><h2>Core Business Models</h2><p>We operate through three distinct, powerful models to maximise global trade potential.</p></div>
+      <div class="svcs">
+        <article class="card gb svc rv">
+          <div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span><span class="tag bl">MODEL_01</span></div>
+          <h3>Support Services</h3><p>Export/import assistance for registered companies and individual traders.</p>
+          <ul><li>End-to-end logistics &amp; customs</li><li>Supplier/buyer coordination</li><li>UK/EU/IND compliance</li><li>Warehousing &amp; distribution</li></ul>
+        </article>
+        <article class="card gb svc hl rv d1">
+          <div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span><span class="tag bl">MODEL_02</span></div>
+          <h3>Inside Dealer</h3><p>Market-based third-party trading connecting global suppliers with active buyers.</p>
+          <ul><li>Global market research</li><li>Product sourcing &amp; validation</li><li>Deal structuring &amp; negotiation</li><li>Import/export management</li></ul>
+        </article>
+        <article class="card gb svc rv d2">
+          <div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span><span class="tag bl">MODEL_03</span></div>
+          <h3>Direct Dealer</h3><p>Brand ownership and market creation for high-potential, niche products.</p>
+          <ul><li>Select high-potential products</li><li>Private-label &amp; rebranding</li><li>Market presence in UK/EU/IND</li><li>Full supply chain ownership</li></ul>
+        </article>
       </div>
     </div>
   </section>
@@ -417,12 +478,16 @@ button,input,select,textarea{font:inherit;color:inherit}
   <!-- Process -->
   <section class="sec" id="process" style="padding-top:0">
     <div class="wrap">
-      <div class="head rv"><span class="eyb">// How it works</span><h2>From origin to market</h2><p>One partner across the whole journey.</p></div>
+      <div class="head rv"><span class="eyb">// Our process</span><h2>Operational Workflow</h2><p>Our 8-step working protocol guarantees efficiency, quality and market readiness — from concept to distribution.</p></div>
       <div class="steps">
-        <div class="card gb step rv"><span class="n">01</span><h3>Identify</h3><p>Products with strong potential, chosen with market intelligence.</p><span class="arr" aria-hidden="true">→</span></div>
-        <div class="card gb step rv d1"><span class="n">02</span><h3>Facilitate logistics</h3><p>Fast, reliable and secure — tailored to your business.</p><span class="arr" aria-hidden="true">→</span></div>
-        <div class="card gb step rv d2"><span class="n">03</span><h3>Build supply chains</h3><p>With emerging suppliers and large-scale enterprises.</p><span class="arr" aria-hidden="true">→</span></div>
-        <div class="card gb step rv d3"><span class="n">04</span><h3>Create &amp; expand markets</h3><p>Smart trading and direct brand creation across borders.</p></div>
+        <div class="card gb step rv"><span class="n">01</span><h3>Identification</h3><p>Research trends, find high-demand gaps and evaluate scalability.</p><span class="arr" aria-hidden="true">→</span></div>
+        <div class="card gb step rv d1"><span class="n">02</span><h3>Verification</h3><p>Validate supplier credibility, capacity and strict quality standards.</p><span class="arr" aria-hidden="true">→</span></div>
+        <div class="card gb step rv d2"><span class="n">03</span><h3>Market Validation</h3><p>Identify target buyers, run demand testing and analyse competition.</p><span class="arr" aria-hidden="true">→</span></div>
+        <div class="card gb step rv d3"><span class="n">04</span><h3>Model Decision</h3><p>Select the best path: Support Service, Inside Dealer or Direct Dealer.</p></div>
+        <div class="card gb step rv"><span class="n">05</span><h3>Deal Structuring</h3><p>Finalise pricing strategy, contracts, agreements and payment terms.</p><span class="arr" aria-hidden="true">→</span></div>
+        <div class="card gb step rv d1"><span class="n">06</span><h3>Logistics Execution</h3><p>Arrange shipping, customs clearance and delivery to warehouse.</p><span class="arr" aria-hidden="true">→</span></div>
+        <div class="card gb step rv d2"><span class="n">07</span><h3>Sales &amp; Distribution</h3><p>Deliver directly to buyers, expand market reach and scale volumes.</p><span class="arr" aria-hidden="true">→</span></div>
+        <div class="card gb step rv d3"><span class="n">08</span><h3>Brand Development</h3><p>Create identity, packaging and marketing campaigns.</p><span class="tag bl" style="margin-top:.7rem">DIRECT DEALER</span></div>
       </div>
     </div>
   </section>
@@ -430,7 +495,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   <!-- Markets -->
   <section class="sec" id="markets" style="padding-top:0">
     <div class="wrap mk">
-      <div class="globe rv" aria-label="Network globe connecting the UK, EU and India">
+      <div class="globe rv" role="img" aria-label="Target markets: active in the UK, EU and India; exploring Asia, Africa and South America">
         <svg viewBox="0 0 480 480" aria-hidden="true">
           <defs><linearGradient id="ag" x1="0" x2="1"><stop offset="0" stop-color="#c5c8cf"/><stop offset="1" stop-color="#5d7ff0"/></linearGradient><clipPath id="gc"><circle cx="240" cy="240" r="202"/></clipPath></defs>
           <g class="grid" clip-path="url(#gc)">
@@ -447,18 +512,13 @@ button,input,select,textarea{font:inherit;color:inherit}
           <circle class="pt" cx="330" cy="228" r="5"/><circle class="pulse" cx="330" cy="228" r="5" style="animation-delay:1.6s"/>
           <circle class="pt ex" cx="360" cy="190" r="4"/><circle class="pt ex" cx="250" cy="300" r="4"/><circle class="pt ex" cx="150" cy="320" r="4"/>
           <text x="160" y="140">UK</text><text x="258" y="152">EU</text><text x="340" y="244">India</text>
+          <text class="ex" x="368" y="186">Asia</text><text class="ex" x="226" y="320">Africa</text><text class="ex" x="104" y="342">S. America</text>
         </svg>
       </div>
       <div class="rv d1">
         <div class="head"><span class="eyb">// Global reach</span><h2>Market Opportunity</h2><p>Global supply is increasing, but market access remains fragmented. We leverage government free-trade deals to solve failures caused by poor logistics, weak branding, or entry strategy.</p></div>
-        <div class="card gb mtable">
-          <div class="mt-row h"><span>MARKET</span><span>STATUS</span></div>
-          <div class="mt-row"><span>United Kingdom</span><span class="tag ok">Active</span></div>
-          <div class="mt-row"><span>European Union</span><span class="tag ok">Active</span></div>
-          <div class="mt-row"><span>India</span><span class="tag ok">Active</span></div>
-          <div class="mt-row"><span>Asia · Africa · South America</span><span class="tag ex">Exploring</span></div>
-        </div>
-        <div class="chips"><span>Consumer goods</span><span>Agriculture</span><span>Industrial materials</span><span>Sustainable products</span><span>Tech accessories</span><span>Fashion</span></div>
+        <p style="color:var(--m)">We focus on the UK, European Union and India, while actively exploring emerging markets across Asia, Africa and South America.</p>
+        <div class="lgd" aria-hidden="true"><span><i></i>Active</span><span><i class="ex"></i>Exploring</span></div>
       </div>
     </div>
   </section>
@@ -473,7 +533,6 @@ button,input,select,textarea{font:inherit;color:inherit}
             <a href="tel:+447553599805"><span class="i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span><small>PHONE</small>+44 7553 599805</span></a>
             <a href="mailto:hillhexo.global@gmail.com"><span class="i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><span><small>EMAIL</small>hillhexo.global@gmail.com</span></a>
           </div>
-          <img class="boxi" src="images/container.png" alt="" width="643" height="388" loading="lazy">
         </div>
         <form class="form" id="enquiry" novalidate>
           <div><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your full name" required></div>
@@ -492,8 +551,11 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="ft">
       <div><a href="#top" class="brand flogo" style="margin-bottom:1.2rem"><img src="images/logo.png" alt="HILLHEXO Ltd — Import & Export" width="230" height="86" loading="lazy"></a><p style="max-width:36ch">Global trade enabler connecting high-potential products with high-demand markets.</p></div>
-      <div><h4>COMPANY</h4><ul><li><a href="#about">About</a></li><li><a href="#features">Advantage</a></li><li><a href="#process">Process</a></li><li><a href="#markets">Markets</a></li></ul></div>
       <div><h4>CONTACT</h4><ul><li><a href="tel:+447553599805">+44 7553 599805</a></li><li><a href="mailto:hillhexo.global@gmail.com">hillhexo.global@gmail.com</a></li></ul></div>
+      <div><h4>SUBSCRIBE</h4><p>Subscribe to receive our latest updates and insights.</p>
+        <form class="sub" id="sub" novalidate><label for="s-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Email address</label><input id="s-email" name="email" type="email" autocomplete="email" placeholder="Enter your email address" required><button class="btn btn-p" type="submit" aria-label="Subscribe"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></form>
+        <span class="msg" id="smsg" role="status" style="display:block;margin-top:.5rem"></span>
+      </div>
     </div>
     <div class="fb"><span>© <span id="yr">2026</span> HILLHEXO LTD. All rights reserved.</span><span class="status">Accepting new enquiries</span></div>
   </div>
@@ -521,7 +583,16 @@ button,input,select,textarea{font:inherit;color:inherit}
     location.href=`mailto:hillhexo.global@gmail.com?subject=${encodeURIComponent('Website enquiry — '+d.name+(d.priority?' ['+d.priority+']':''))}&body=${encodeURIComponent(body)}`;
     msg.style.color='';msg.textContent='Opening your email app…';
   });
+
+  const sub=$('#sub'),smsg=$('#smsg');
+  sub.addEventListener('submit',e=>{
+    e.preventDefault();const em=sub.email.value.trim();
+    if(!em||!sub.email.checkValidity()){smsg.style.color='#fca5a5';smsg.textContent='Please enter a valid email address.';return}
+    location.href=`mailto:hillhexo.global@gmail.com?subject=${encodeURIComponent('Newsletter subscription')}&body=${encodeURIComponent('Please subscribe '+em+' to HILLHEXO updates and insights.')}`;
+    smsg.style.color='';smsg.textContent='Thanks — opening your email app to confirm…';
+  });
 })();
 </script>
+<script src="blob.js" defer></script>
 </body>
 </html>

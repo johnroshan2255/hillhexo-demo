@@ -78,7 +78,26 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
 .statement h2{font-size:clamp(2rem,5.4vw,5.2rem);font-weight:500;letter-spacing:-.045em;line-height:1.02;max-width:17ch;margin-top:1.5rem}
 .statement h2 em{color:#d3d6dd}
 .statement .cols{display:grid;grid-template-columns:repeat(12,1fr);gap:1.5rem;margin-top:clamp(2.5rem,6vw,5rem)}
-.statement .cols p{grid-column:7/span 5;color:var(--m);font-size:clamp(1rem,1.4vw,1.15rem)}
+.statement .cols p{grid-column:7/span 5;color:var(--m);font-size:clamp(1rem,1.4vw,1.15rem);align-self:center}
+.statement .cols .lqb{grid-column:1/span 5;justify-self:center;width:clamp(200px,24vw,320px);aspect-ratio:1}
+.lqb{position:relative;touch-action:pan-y}
+.lqb img,.lqb canvas{position:absolute;left:-15%;top:-15%;width:130%;height:130%}
+.lqb img{left:0;top:0;width:100%;height:100%;animation:bob 8s ease-in-out infinite}
+.lqb canvas{filter:drop-shadow(0 30px 30px rgba(0,0,0,.7))}
+.lqb.gl img{display:none}
+
+/* Services — business models */
+.models{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--l)}
+.models article{position:relative;padding:clamp(2rem,3.5vw,3rem) clamp(1rem,2.5vw,2.4rem) clamp(2rem,3.5vw,3rem) 0;isolation:isolate}
+.models article+article{border-left:1px solid var(--l);padding-left:clamp(1rem,2.5vw,2.4rem)}
+.models .n{font-family:var(--serif);font-style:italic;font-size:clamp(3.4rem,6vw,5.5rem);line-height:.8;color:var(--b7)}
+.models h3{font-size:clamp(1.6rem,2.6vw,2.3rem);font-weight:500;letter-spacing:-.035em;margin:1.3rem 0 .6rem}
+.models p{color:var(--m);max-width:36ch}
+.models ul{list-style:none;margin-top:1.6rem;border-top:1px solid var(--l)}
+.models li{display:flex;gap:.8rem;align-items:baseline;padding:.8rem 0;border-bottom:1px solid var(--l);color:#d9dce2;transition:color .3s,padding .4s var(--e)}
+.models li::before{content:"—";color:var(--b4)}
+.models li:hover{color:#fff;padding-left:.4rem}
+.band .bi{color:#ced1d8;margin-top:1.4rem;max-width:40ch}
 
 /* Mission / Vision */
 .mv{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--l)}
@@ -115,12 +134,12 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
 .band .band-in{position:relative;display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(2rem,5vw,5rem);align-items:center}
 .band h2{font-size:clamp(2rem,4.4vw,4rem);font-weight:500;letter-spacing:-.045em;line-height:1}
 .band h2 em{color:#e4e7ee}
-.band img{width:min(380px,80%);margin-top:2rem;transform:rotate(-5deg);filter:drop-shadow(0 30px 30px rgba(0,0,0,.6))}
 .steps{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.14)}
 .steps div{padding:1.6rem 1.2rem 1.6rem 0;border-bottom:1px solid rgba(255,255,255,.14)}
 .steps div:nth-child(odd){border-right:1px solid rgba(255,255,255,.14)}
 .steps div:nth-child(even){padding-left:1.4rem}
 .steps .k{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:#d3d6dd}
+.steps small{display:inline-block;margin-top:.6rem;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:#e4e7ee;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:.15rem .55rem}
 .steps h4{font-size:1.3rem;font-weight:500;letter-spacing:-.02em;margin:.4rem 0 .3rem}
 .steps p{color:#ced1d8;font-size:.92rem}
 
@@ -146,11 +165,8 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
 .inds .sl{color:var(--b7);margin:0 .35em}
 
 /* Contact */
-.contact .top{display:grid;grid-template-columns:1.4fr 1fr;align-items:end;gap:2rem}
 .contact h2{font-size:clamp(4rem,14vw,13rem);font-weight:500;letter-spacing:-.06em;line-height:.85}
 .contact h2 em{color:#d3d6dd}
-.contact .crate2{width:min(380px,100%);justify-self:end;transform:rotate(4deg)}
-.contact .crate2 img{animation:bob 6s ease-in-out infinite;filter:drop-shadow(0 30px 30px rgba(0,0,0,.8))}
 @keyframes bob{50%{transform:translateY(-12px) rotate(-1.5deg)}}
 .mail{display:inline-block;margin-top:clamp(1.5rem,3vw,2.5rem);font-size:clamp(1.3rem,4.2vw,3.4rem);font-weight:500;letter-spacing:-.035em;border-bottom:2px solid var(--b7);padding-bottom:.2rem;transition:color .3s,border-color .3s;word-break:break-all}
 .mail:hover{color:#d3d6dd;border-color:#d3d6dd}
@@ -173,9 +189,16 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
 .send:hover{background:var(--b6)}.send:hover i{transform:rotate(-45deg)}
 .msg{font-size:.9rem;color:#6ee7b7;min-height:1.2em}
 
-.footer{border-top:1px solid var(--l);padding-block:1.6rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.85rem;color:var(--d)}
-.footer nav{display:flex;gap:1.5rem}
+.footer{border-top:1px solid var(--l);padding-block:clamp(2rem,4vw,3rem) 1.6rem;display:grid;grid-template-columns:1fr minmax(280px,420px);gap:1.5rem 3rem;align-items:end;font-size:.85rem;color:var(--d)}
 .footer a:hover{color:#fff}
+.footer .sub-t{color:var(--m);font-size:.95rem}
+.sub{display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,.2);margin-top:.6rem;transition:border-color .3s}
+.sub:focus-within{border-color:var(--b4)}
+.sub input{flex:1;min-width:0;background:none;border:0;outline:none;padding:.8rem 0;font-size:16px;color:#fff}
+.sub input::placeholder{color:#4c5568}
+.sub button{flex:none;width:40px;height:40px;border-radius:50%;border:0;background:#fff;color:var(--b7);display:grid;place-items:center;cursor:pointer;transition:transform .4s var(--e)}
+.sub button:hover{transform:rotate(-45deg)}
+.footer .fb{grid-column:1/-1;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--l);padding-top:1.4rem;margin-top:.6rem}
 
 /* Reveal */
 .rv{opacity:0;transform:translateY(30px);transition:opacity 1s var(--e),transform 1s var(--e)}
@@ -196,8 +219,10 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
   .adv.end{display:none}
   .hz-prog{display:none}
   .mk-head{grid-template-columns:1fr}.mk-head p{justify-self:start}
-  .contact .top{grid-template-columns:1fr}
-  .contact .crate2{justify-self:start;width:min(300px,80%)}
+  .models{grid-template-columns:1fr}
+  .models article+article{border-left:0;border-top:1px solid var(--l);padding-left:0}
+  .statement .cols .lqb{grid-column:1/-1;width:min(240px,62vw);margin-bottom:-1rem}
+  .footer{grid-template-columns:1fr}
 }
 @media (max-width:760px){
   .links{position:fixed;inset:0;z-index:-1;flex-direction:column;justify-content:center;padding:var(--pad);gap:1.2rem;background:#000;opacity:0;pointer-events:none;transition:opacity .35s}
@@ -228,7 +253,7 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
 
 <header class="nav" id="nav">
   <a href="#top" class="brand" aria-label="HILLHEXO Ltd — Import & Export, home"><img src="images/logo-nav.png" alt="HILLHEXO Ltd" width="162" height="54"></a>
-  <nav class="links" id="menu" aria-label="Main"><a href="#about">About</a><a href="#advantage">Advantage</a><a href="#markets">Markets</a><a href="#contact">Contact</a></nav>
+  <nav class="links" id="menu" aria-label="Main"><a href="#about">About</a><a href="#services">Services</a><a href="#advantage">Advantage</a><a href="#markets">Markets</a><a href="#contact">Contact</a></nav>
   <a href="#contact" class="talk">Let's talk <i><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></i></a>
   <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
 </header>
@@ -258,7 +283,8 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
     <p class="lab rv"><b>(01)</b>The concept</p>
     <h2 class="split">We are the <em>bridge</em> between product origin and market <em>demand.</em></h2>
     <div class="cols">
-      <p class="rv">HILLHEXO LTD identifies products with strong potential, facilitates logistics, builds supply chains, and creates or expands markets — transforming global trade by making high-potential products accessible, scalable, and successful across borders.</p>
+      <div class="lqb" aria-hidden="true"><img src="images/chrome-blob.png" alt="" width="300" height="300" loading="lazy"><canvas></canvas></div>
+      <p class="rv">HILLHEXO LTD identifies products with strong potential, facilitates logistics, builds supply chains, and creates or expands markets.</p>
     </div>
   </section>
 
@@ -271,11 +297,48 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
     </div>
   </section>
 
+  <!-- Services: business models -->
+  <section class="sec px" id="services" style="padding-top:0">
+    <div class="mk-head rv">
+      <div><p class="lab" style="margin-bottom:1rem"><b>(03)</b>What we do</p><h2>Core business <em>models</em></h2></div>
+      <p>We operate through three distinct, powerful models to maximise global trade potential.</p>
+    </div>
+    <div class="models">
+      <article class="rv"><div class="n">i.</div><h3>Support Services</h3><p>Export/import assistance for registered companies and individual traders.</p>
+        <ul><li>End-to-end logistics &amp; customs</li><li>Supplier/buyer coordination</li><li>UK/EU/IND compliance</li><li>Warehousing &amp; distribution</li></ul></article>
+      <article class="rv"><div class="n">ii.</div><h3>Inside Dealer</h3><p>Market-based third-party trading connecting global suppliers with active buyers.</p>
+        <ul><li>Global market research</li><li>Product sourcing &amp; validation</li><li>Deal structuring &amp; negotiation</li><li>Import/export management</li></ul></article>
+      <article class="rv"><div class="n">iii.</div><h3>Direct Dealer</h3><p>Brand ownership and market creation for high-potential, niche products.</p>
+        <ul><li>Select high-potential products</li><li>Private-label &amp; rebranding</li><li>Market presence in UK/EU/IND</li><li>Full supply chain ownership</li></ul></article>
+    </div>
+  </section>
+
+  <!-- Operational workflow -->
+  <section class="band sec" id="process">
+    <div class="band-in px">
+      <div class="rv">
+        <p class="lab" style="color:#ced1d8;margin-bottom:1.2rem"><b style="color:#e4e7ee">(04)</b>Our process</p>
+        <h2>Operational <em>workflow</em> — concept <em>to</em> distribution.</h2>
+        <p class="bi">Our 8-step working protocol guarantees efficiency, quality and market readiness.</p>
+      </div>
+      <div class="steps rv">
+        <div><span class="k">01</span><h4>Identification</h4><p>Research trends, find high-demand gaps and evaluate scalability.</p></div>
+        <div><span class="k">02</span><h4>Verification</h4><p>Validate supplier credibility, capacity and strict quality standards.</p></div>
+        <div><span class="k">03</span><h4>Market Validation</h4><p>Identify target buyers, run demand testing and analyse competition.</p></div>
+        <div><span class="k">04</span><h4>Model Decision</h4><p>Select the best path: Support Service, Inside Dealer or Direct Dealer.</p></div>
+        <div><span class="k">05</span><h4>Deal Structuring</h4><p>Finalise pricing strategy, contracts, agreements and payment terms.</p></div>
+        <div><span class="k">06</span><h4>Logistics Execution</h4><p>Arrange shipping, customs clearance and delivery to warehouse.</p></div>
+        <div><span class="k">07</span><h4>Sales &amp; Distribution</h4><p>Deliver directly to buyers, expand market reach and scale volumes.</p></div>
+        <div><span class="k">08</span><h4>Brand Development</h4><p>Create identity, packaging and marketing campaigns.</p><small>Direct Dealer</small></div>
+      </div>
+    </div>
+  </section>
+
   <!-- Advantages: horizontal scroll -->
   <section class="hz" id="advantage">
     <div class="hz-sticky">
       <div class="hz-head px">
-        <div><p class="lab" style="margin-bottom:1rem"><b>(03)</b>Why choose us</p><h2>Our competitive <em>advantage</em></h2></div>
+        <div><p class="lab" style="margin-bottom:1rem"><b>(05)</b>Why choose us</p><h2>Our competitive <em>advantage</em></h2></div>
         <div class="hz-prog" aria-hidden="true"><i id="prog"></i></div>
       </div>
       <div class="track" id="track">
@@ -288,27 +351,10 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
     </div>
   </section>
 
-  <!-- Band -->
-  <section class="band sec">
-    <div class="band-in px">
-      <div class="rv">
-        <p class="lab" style="color:#ced1d8;margin-bottom:1.2rem"><b style="color:#e4e7ee">(04)</b>How we work</p>
-        <h2>From origin <em>to</em> market — one partner, <em>end to end.</em></h2>
-        <img src="images/container.png" alt="" width="643" height="388" loading="lazy">
-      </div>
-      <div class="steps rv">
-        <div><span class="k">i.</span><h4>Identify</h4><p>Products with strong potential, chosen with data-driven market intelligence.</p></div>
-        <div><span class="k">ii.</span><h4>Facilitate logistics</h4><p>Fast, reliable and secure logistics tailored to your business.</p></div>
-        <div><span class="k">iii.</span><h4>Build supply chains</h4><p>With emerging, small suppliers and large-scale enterprises alike.</p></div>
-        <div><span class="k">iv.</span><h4>Create &amp; expand markets</h4><p>Smart trading and direct brand creation across borders.</p></div>
-      </div>
-    </div>
-  </section>
-
   <!-- Markets -->
   <section class="sec px" id="markets">
     <div class="mk-head rv">
-      <div><p class="lab" style="margin-bottom:1rem"><b>(05)</b>Global reach</p><h2>Market <em>opportunity</em></h2></div>
+      <div><p class="lab" style="margin-bottom:1rem"><b>(06)</b>Global reach</p><h2>Market <em>opportunity</em></h2></div>
       <p>Global supply is increasing, but market access remains fragmented. We leverage government free-trade deals to bring better opportunities to the global market — solving failures caused by poor logistics, weak branding, or entry strategy.</p>
     </div>
     <div class="rows">
@@ -324,14 +370,11 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
 
   <!-- Contact -->
   <section class="sec px contact" id="contact" style="padding-top:0">
-    <p class="lab rv" style="margin-bottom:1.5rem"><b>(06)</b>Get in touch</p>
+    <p class="lab rv" style="margin-bottom:1.5rem"><b>(07)</b>Get in touch</p>
     <div class="top">
-      <div>
-        <h2 class="split">Let's <em>talk.</em></h2>
-        <a class="mail rv" href="mailto:hillhexo.global@gmail.com">hillhexo.global@gmail.com</a>
-        <a class="phone rv" href="tel:+447553599805">+44 7553 599805</a>
-      </div>
-      <div class="crate2 rv"><img src="images/container.png" alt="" width="643" height="388" loading="lazy"></div>
+      <h2 class="split">Let's <em>talk.</em></h2>
+      <a class="mail rv" href="mailto:hillhexo.global@gmail.com">hillhexo.global@gmail.com</a>
+      <a class="phone rv" href="tel:+447553599805">+44 7553 599805</a>
     </div>
     <form class="cform" id="enquiry" novalidate>
       <p class="lab"><b>→</b>Or send an enquiry</p>
@@ -345,8 +388,14 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
   </section>
 
   <footer class="footer px">
-    <span style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap"><img src="images/logo-nav.png" alt="HILLHEXO Ltd" width="120" height="40" loading="lazy" style="height:40px;width:auto"><span>© <span id="yr">2026</span> HILLHEXO LTD — Import &amp; Export</span></span>
-    <nav><a href="#about">About</a><a href="#markets">Markets</a><a href="#contact">Contact</a><a href="#top">Top ↑</a></nav>
+    <p class="sub-t" style="max-width:34ch">Global trade enabler connecting high-potential products with high-demand markets.</p>
+    <div>
+      <p class="lab">Subscribe</p>
+      <p class="sub-t" style="margin-top:.4rem">Subscribe to receive our latest updates and insights.</p>
+      <form class="sub" id="sub" novalidate><label for="s-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Email address</label><input id="s-email" name="email" type="email" autocomplete="email" placeholder="Enter your email address" required><button type="submit" aria-label="Subscribe"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button></form>
+      <span class="msg" id="smsg" role="status" style="display:block;margin-top:.5rem"></span>
+    </div>
+    <div class="fb"><span>© <span id="yr">2026</span> HILLHEXO LTD — Import &amp; Export. All rights reserved.</span><a href="#top">Back to top ↑</a></div>
   </footer>
 </main>
 
@@ -411,7 +460,16 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing
     location.href=`mailto:hillhexo.global@gmail.com?subject=${encodeURIComponent('Website enquiry — '+d.name+(d.priority?' ['+d.priority+']':''))}&body=${encodeURIComponent(body)}`;
     msg.style.color='';msg.textContent='Opening your email app…';
   });
+
+  const sub=$('#sub'),smsg=$('#smsg');
+  sub.addEventListener('submit',e=>{
+    e.preventDefault();const em=sub.email.value.trim();
+    if(!em||!sub.email.checkValidity()){smsg.style.color='#fca5a5';smsg.textContent='Please enter a valid email address.';return}
+    location.href=`mailto:hillhexo.global@gmail.com?subject=${encodeURIComponent('Newsletter subscription')}&body=${encodeURIComponent('Please subscribe '+em+' to HILLHEXO updates and insights.')}`;
+    smsg.style.color='';smsg.textContent='Thanks — opening your email app to confirm…';
+  });
 })();
 </script>
+<script src="blob.js" defer></script>
 </body>
 </html>
